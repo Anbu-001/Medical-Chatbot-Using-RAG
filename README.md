@@ -1,14 +1,16 @@
 <<<<<<< HEAD
 # Medical-Chatbot-Using-RAG
 =======
-# RAG Chatbot
 
-A simple Retrieval-Augmented Generation chatbot using LangChain, ChromaDB, and a Hugging Face open-source model (FLAN-T5) for generation.
+# Medical RAG Chatbot
+
+A Retrieval-Augmented Generation (RAG) chatbot for medical question answering, using LangChain, ChromaDB, and the Llama-3.1-8b-instant model via Groq for answer generation.
 
 ## Features
 - Ingest PDFs/TXT/MD from `data/documents`
 - Chunk, embed (Sentence Transformers), and store in ChromaDB
-- Retrieve relevant chunks and generate answers
+- Retrieve relevant chunks and generate answers using Llama-3.1-8b-instant (Groq)
+- Strictly grounded medical answers (no outside knowledge)
 - CLI chat interface
 
 ## Quickstart
@@ -29,9 +31,9 @@ python main.py
 ```
 
 ## Configuration
-- Update model and paths in `config.py` if needed.
+- Update model and paths in `config.py` and `.env` if needed.
 - Default embedding model: `sentence-transformers/all-MiniLM-L6-v2`.
-- Default generator model: `google/flan-t5-base` (downloads on first run).
+- Default generator model: `Llama-3.1-8b-instant` via Groq (set in `.env` as `GROQ_MODEL_NAME`).
 
 ## Project Structure
 ```
@@ -55,6 +57,7 @@ rag-chatbot/
 ├── config.py
 ├── requirements.txt
 ├── main.py
+├── .env
 └── README.md
 ```
 >>>>>>> 30cc931 (Initial commit)
