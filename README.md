@@ -56,4 +56,3 @@ rag-chatbot/
 ├── .env
 └── README.md
 ```
->>>>>>> 30cc931 (Initial commit)
