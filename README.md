@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Medical-Chatbot-Using-RAG
-=======
-
 # Medical RAG Chatbot
 
 A Retrieval-Augmented Generation (RAG) chatbot for medical question answering, using LangChain, ChromaDB, and the Llama-3.1-8b-instant model via Groq for answer generation.
